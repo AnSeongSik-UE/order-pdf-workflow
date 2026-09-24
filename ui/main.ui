@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1366</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>주문운송관리 - 주문 처리</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>favicon.ico</normaloff>favicon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="mainTab">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1366</width>
+      <height>763</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab1">
+     <attribute name="title">
+      <string>주문내역</string>
+     </attribute>
+     <widget class="QTableWidget" name="t1_table">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>1341</width>
+        <height>641</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>1341</width>
+        <height>641</height>
+       </size>
+      </property>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>합성일</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>주문일</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>발송일</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>주문번호</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>상품번호</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>주문자</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>연락처</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>주소</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>상품명</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>송장번호</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>택배코드</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>권수</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>내지</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>표지</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>835</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_14">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="t1_lb8">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>전체선택</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="t1_checkAll">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="t1_Check_choice_Button">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>75</horstretch>
+             <verstretch>23</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>85</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>선택체크</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="t1_lb5">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PDF 다운</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="t1_pdfCombo">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>23</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>선택</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>전체</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="t1_pdfDownBtn">
+           <property name="minimumSize">
+            <size>
+             <width>85</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>다운로드</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="t1_lb6">
+           <property name="minimumSize">
+            <size>
+             <width>35</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>필터</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="t1_filterCombo">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>23</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>주문자</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>주문번호</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>상품번호</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>송장번호</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>권수</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="t1_filterTxt">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>125</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="t1_filterBtn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>75</horstretch>
+             <verstretch>23</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>85</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>필터적용</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>21</x>
+        <y>10</y>
+        <width>853</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="t1_lb1">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>합성일자</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="t1_preDate">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="t1_lb2">
+           <property name="minimumSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>~</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="t1_afterDate">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="t1_searchBtn">
+           <property name="minimumSize">
+            <size>
+             <width>75</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>검색</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="t1_lb3">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>총 검색 건수 : </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="searchResultNum">
+         <property name="minimumSize">
+          <size>
+           <width>32</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="t1_lb4">
+         <property name="minimumSize">
+          <size>
+           <width>16</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>건</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="t1_lb9">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>/   총 권수 : </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="searchBookNum">
+         <property name="minimumSize">
+          <size>
+           <width>32</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="t1_lb10">
+         <property name="minimumSize">
+          <size>
+           <width>16</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>권</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="t1_excelDownBtn">
+         <property name="minimumSize">
+          <size>
+           <width>85</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>리스트 저장</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="t1_configBtn">
+         <property name="minimumSize">
+          <size>
+           <width>85</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>환경설정</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab2">
+     <attribute name="title">
+      <string>운송장번호 업로드</string>
+     </attribute>
+     <widget class="QGroupBox" name="t2_gb1">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>611</width>
+        <height>721</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>611</width>
+        <height>721</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>개별 전송</string>
+      </property>
+      <widget class="QPushButton" name="t2_oneSendBtn">
+       <property name="geometry">
+        <rect>
+         <x>92</x>
+         <y>141</y>
+         <width>151</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>23</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>송장번호 전송</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>26</x>
+         <y>84</y>
+         <width>218</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <item>
+         <widget class="QLabel" name="t2_gb1_lb3">
+          <property name="minimumSize">
+           <size>
+            <width>59</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>택배코드</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="t2_taxCombo">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>대한통운</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>한진택배</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>아주택배</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>하나로택배</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>CJ택배</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>우체국택배</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>로젠택배</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>용마로지스</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>현대택배</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>옐로우캡</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>KGB택배</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>동부택배</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>KG로지스</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>직접배송</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>26</x>
+         <y>113</y>
+         <width>218</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <widget class="QLabel" name="t2_gb1_lb4">
+          <property name="minimumSize">
+           <size>
+            <width>59</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>발송날짜</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="t2_sendDate"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>54</y>
+         <width>218</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_12">
+        <item>
+         <widget class="QLabel" name="t2_gb1_lb2">
+          <property name="minimumSize">
+           <size>
+            <width>59</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>송장번호</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="t2_taxNum">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>23</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>25</y>
+         <width>218</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_13">
+        <item>
+         <widget class="QLabel" name="t2_gb1_lb1">
+          <property name="minimumSize">
+           <size>
+            <width>59</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>주문번호</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="t2_productNum">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>23</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="t2_gb2">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>10</y>
+        <width>621</width>
+        <height>721</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>621</width>
+        <height>721</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>엑셀 전송</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>320</y>
+         <width>451</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>미리보기</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>22</x>
+         <y>32</y>
+         <width>411</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QLabel" name="t2_gb2_lb1">
+          <property name="minimumSize">
+           <size>
+            <width>105</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string> 엑셀(.xlsx) 선택 </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="t2_excelPath">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>206</width>
+            <height>23</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="t2_searchExcelBtn">
+          <property name="minimumSize">
+           <size>
+            <width>75</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>찾기</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>22</x>
+         <y>100</y>
+         <width>239</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <widget class="QPushButton" name="t2_excelSendBtn">
+          <property name="minimumSize">
+           <size>
+            <width>115</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>송장번호 전송</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="t2_seeTaxcodeBtn">
+          <property name="minimumSize">
+           <size>
+            <width>115</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>택배코드 보기</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGraphicsView" name="t2_gb2_imageView">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>160</y>
+         <width>531</width>
+         <height>133</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="dragMode">
+        <enum>QGraphicsView::NoDrag</enum>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
